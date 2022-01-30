@@ -31,14 +31,26 @@
 		<li>A $ \in R^{d\times d}$ is Diagonalizable.</li>
 		<li> Let $\lambda_1,\lambda_2,.....,\lambda_d$ be d eigenvalues of A and Let $v_1,v_2,......,v_d$ be Corresponding eigenvectors.
 		<li> Let $b_0=c_1v_1+c_2v_2+.......+c_dv_d$  such that $c_1 \neq 0$.</li>
-		<li>Suppose $\lambda_1$ is the dominant eigenvalue such that $|\lambda_1|\gt |lambda_j|$ for j$\gt$ 1.
+		<li>Suppose $\lambda_1$ is the dominant eigenvalue such that $|\lambda_1|\gt |\lambda_j|$ for j$\gt$ 1.
 		<li>$A^kb_0=c_1A^kv_1+c_2A^kv_2+.......+c_dA^kv_d$ 
 			$=c_1\lambda_1^kv_1+c_2\lambda_2^kv_2+.......+c_d\lambda_d^kv_d$ <br>
 			$=c_1\lambda_1^k\left[ v_1+\frac{c_2}{c_1}(\frac{\lambda_2}{\lambda_1})^kv_2 +.......+(\frac{\lambda_d}{\lambda_1})^kv_d\right]$
 		</li>
 		
-		<li>$|\frac{\lambda_j}{\lambda_1}|\lt 1$ for j$\gt$ 1.Therefore $A^kb_0$ $\rightarrow$ $c_1\LAMBDA_1^KV_1$ AS $K \rightarrow \infty$</li>
+		<li>$|\frac{\lambda_j}{\lambda_1}|\lt 1$ for j$\gt$ 1.Therefore $A^kb_0$ $\rightarrow$ $c_1\lambda_1^kv_1$ AS $k \rightarrow \infty$</li>
+		<li>$b_k=\frac{A^kb_0}{||A^kb_0||}$ converges to eigen vector of a corresponding to maximum eigen value.<li>
+		<li> $\mu_k=\frac{b_k^TAb_k}{b_k^Tb_k}$ converges to dominant eigen value. </li>
 	</ul>	
+		<div>
+			<ol>
+				<li>Produce random vector $b_0$</li>
+				<li>While(k$\lt$NO_of_loops)</li>
+				<li>	$b_{k+1}=Ab_k$</li>
+				<li>	$\mu_k=\frac{b_k^Tb_{k+1}}{b_k^Tb_k}$</li>
+				<li>	$b_k=\frac{b_{k+1}}{||b_{k+1}||}$</li>
+				<li>Return $\mu_k$(largest eigen value) ,$b_k$(corresponding eigen vector).</li>
+			</ol>
+		</div>	
 	</div>
 </body>
   
