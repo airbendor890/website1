@@ -31,9 +31,13 @@
 		<li>A $ \in R^{d\times d}$ is Diagonalizable.</li>
 		<li> Let $\lambda_1,\lambda_2,.....,\lambda_d$ be d eigenvalues of A and Let $v_1,v_2,......,v_d$ be Corresponding eigenvectors.
 		<li> Let $b_0=c_1v_1+c_2v_2+.......+c_dv_d$  such that $c_1 \neq 0$.</li>
-		<li>$A^kb_0=c_1A^kv_1+c_2A^kv_2+.......+c_dA^kv_d$ <br>
-			$=c_1\lambda_1^kv_1+c_2\lambda_2^kv_2+.......+c_d\lambda_d^kv_d$
+		<li>Suppose $\lambda_1$ is the dominant eigenvalue such that $|\lambda_1|\gt |lambda_j|$ for j$\gt$ 1.
+		<li>$A^kb_0=c_1A^kv_1+c_2A^kv_2+.......+c_dA^kv_d$ 
+			$=c_1\lambda_1^kv_1+c_2\lambda_2^kv_2+.......+c_d\lambda_d^kv_d$ <br>
+			$=c_1\lambda_1^k\left[ v_1+\frac{c_2}{c_1}(\frac{\lambda_2}{\lambda_1})^kv_2 +.......+(\frac{\lambda_d}{\lambda_1})^kv_d\right]$
 		</li>
+		
+		<li>$|\frac{\lambda_j}{\lambda_1}|\lt 1$ for j$\gt$ 1.Therefore $A^kb_0$ $\rightarrow$ $c_1\LAMBDA_1^KV_1$ AS $K \rightarrow \infty$</li>
 	</ul>	
 	</div>
 </body>
